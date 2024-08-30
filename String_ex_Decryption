@@ -1,0 +1,37 @@
+
+public class String_ex_Decryption  {
+    public static void main(String[] args) {
+    	
+    // 1.Print the Original message
+    // 2. Split the message into words using space as the delimiter.	
+    // 3. Replace nth word(i.e.,args[1]) ,from the list of separated words, with args[2] in the message.	
+    	String s1=args[0];
+    	int n=Integer.parseInt(args[1]);
+    	String s2=args[2];
+    	System.out.println("Original Message: "+s1);
+    	String[] w=s1.split(" ");
+    	System.out.println("Separeted Words:");
+    	for(String word:w){
+    		System.out.println(word);
+    	}
+    	if(n>=0 && n< w.length){
+    		w[n]=s2;
+    	}else{
+    		System.out.println("Invalid word position.");
+    		return;
+    	}
+    	StringBuilder dec=new StringBuilder();
+    	for(String word:w){
+    		dec.append(word).append(" ");
+    	}
+    	System.out.println("Decrypted Message: "+dec.toString().trim());
+    	
+    	
+    	
+    	
+    }
+}
+
+
+
+
