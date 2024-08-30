@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class String_ex_sum {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		int m=s.nextInt();
+		System.out.println("Sum: "+(n+m));
+
+	}
+
+}
