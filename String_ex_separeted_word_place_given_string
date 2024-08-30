@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class String_ex_separeted_word_place_given_string {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		
+		String sen=s.nextLine();
+		String word=s.nextLine();
+		int index=s.nextInt();
+		
+		
+		System.out.println("Original Message: "+sen);
+		System.out.println("Separeted Words: "+word);
+		String[] w=sen.split(" ");
+		for(String words:w) {
+			System.out.println(words);
+		}
+		System.out.println("Decrypted message: ");
+		if(index>=0 && index<w.length) {
+			w[index]=word;
+		}else {
+			System.out.println("Invalid word position");
+		}
+		String[] ans=new String[w.length];
+		int i=1;
+		for(String a:w) {
+			System.out.println(a+" ");
+		}
+		System.out.println(w.length);
+       
+	}
+
+}
