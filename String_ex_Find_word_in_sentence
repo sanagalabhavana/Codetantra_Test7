@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class String_ex_Find_word_in_sentence {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.print("Enter the sentence : ");
+		String sen=s.nextLine();
+		System.out.print("Enter a word to find: ");
+		String word=s.nextLine();
+		int cnt=0;
+		String w="";
+		int ans=0;
+		sen+=" ";
+		for(int i=0;i<sen.length();i++) {
+			char ch=sen.charAt(i);
+			cnt++;
+			if(ch!=' ') {
+				w=w+ch;
+			}else {
+				if(w.equals(word)) {
+				
+				ans++;
+				break;
+			}
+			else {
+				w="";
+			 }
+			}
+		}
+		cnt=cnt-word.length();
+		if(ans!=0) {
+			System.out.println("The word "+word+" is found at index "+(cnt-1)+" in the sentence.");
+		}else {
+			System.out.println("The word "+word+" is not found");
+		}
+
+	}
+
+}
